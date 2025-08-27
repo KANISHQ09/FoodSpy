@@ -1,7 +1,18 @@
-const marks = [85, 90, 78, 88, 92];
+let math = 85;
+let science = 90;
+let english = 78;
 
-const total = marks.reduce((a, b) => a + b, 0);
-const avg = total / marks.length;
-let grade = avg >= 90 ? "A+" : avg >= 80 ? "A" : avg >= 70 ? "B" : "C";
+let total = math + science + english;
 
-console.log(`Total: ${total}, Average: ${avg}, Grade: ${grade}`);
+let average = total / 3;
+
+let grade;
+if (average >= 90) grade = "A+";
+else if (average >= 80) grade = "A";
+else if (average >= 70) grade = "B";
+else if (average >= 60) grade = "C";
+else grade = "Fail";
+
+console.log("Total Marks:", total);
+console.log("Average Marks:", average);
+console.log("Grade:", grade);
