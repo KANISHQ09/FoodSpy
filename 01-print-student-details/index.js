@@ -6,13 +6,10 @@ const student = {
 };
 
 console.log("---- Student Details ----");
-for (const key in student) {
-  if (typeof student[key] === "object") {
-    console.log(`${key}:`);
-    for (const subject in student[key]) {
-      console.log(`   ${subject}: ${student[key][subject]}`);
-    }
-  } else {
-    console.log(`${key}: ${student[key]}`);
-  }
-}
+console.log(`Name: ${student.name}`);
+console.log(`Age: ${student.age}`);
+console.log(`Class: ${student.class}`);
+console.log("Marks:");
+console.log(`  Math: ${student.marks.math}`);
+console.log(`  Science: ${student.marks.science}`);
+console.log(`  English: ${student.marks.english}`);
