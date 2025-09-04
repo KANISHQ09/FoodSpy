@@ -1,23 +1,56 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
-app.use(express.json());
+const PORT = 3000;
 
-let students = [];
+app.use(bodyParser.json());
 
-app.get("/students", (req, res) => res.json(students));
+let students = [
+  { id: 1, name: "Aarav", age: 20 },
+  { id: 2, name: "Ishita", age: 22 },
+];
+
+app.get("/students", (req, res) => {
+  res.json(students);
+});
+
+app.get("/students/:id", (req, res) => {
+  const student = students.find(s => s.id === parseInt(req.params.id));
+  student ? res.json(student) : res.status(404).json({ message: "Student not found" });
+});
+
 app.post("/students", (req, res) => {
-  const student = { id: Date.now(), ...req.body };
-  students.push(student);
-  res.json(student);
-});
-app.put("/students/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  students = students.map((s) => (s.id === id ? { ...s, ...req.body } : s));
-  res.json({ success: true });
-});
-app.delete("/students/:id", (req, res) => {
-  students = students.filter((s) => s.id !== parseInt(req.params.id));
-  res.json({ success: true });
+  const newStudent = {
+    id: students.length + 1,
+    name: req.body.name,
+    age: req.body.age,
+  };
+  students.push(newStudent);
+  res.status(201).json(newStudent);
 });
 
-app.listen(3000, () => console.log("CRUD API running on 3000"));
+app.put("/students/:id", (req, res) => {
+  const student = students.find(s => s.id === parseInt(req.params.id));
+  if (student) {
+    student.name = req.body.name || student.name;
+    student.age = req.body.age || student.age;
+    res.json(student);
+  } else {
+    res.status(404).json({ message: "Student not found" });
+  }
+});
+
+app.delete("/students/:id", (req, res) => {
+  const studentIndex = students.findIndex(s => s.id === parseInt(req.params.id));
+  if (studentIndex !== -1) {
+    students.splice(studentIndex, 1);
+    res.json({ message: "Student deleted" });
+  } else {
+    res.status(404).json({ message: "Student not found" });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
