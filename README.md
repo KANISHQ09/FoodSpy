@@ -26,13 +26,11 @@ Study Buddy brings **AI intelligence + peer collaboration** together in one plat
 ## 🖼️ Project Demo (PPT)
 
 👉 [View Project Presentation (Google Slides)]()  
-*(Replace this with your actual PPT link)*  
 
 ---
 
 ## 🎥 Video Demo
 
-👉 [Watch on YouTube](https://www.youtube.com/watch?v=GV382wegBnA)  
-*(Upload your demo and replace the link)*  
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=GV382wegBnA) 
 
 ---
