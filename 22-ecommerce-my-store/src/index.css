@@ -1,0 +1,335 @@
+/*==================== Variable ====================*/
+/*========== Color ==========*/
+/*========== Font and Typography ==========*/
+/*========== px value in rem ==========*/
+/*========== Font weight ==========*/
+/*==================== Boilerplate ====================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/*========== Body - Scroll Bar ==========*/
+body::-webkit-scrollbar {
+  background-color: rgba(128, 128, 128, 0.801);
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: rgb(61, 61, 61);
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.darkMode {
+  background-color: #111827;
+  color: #fff;
+}
+
+/*========== Navbar ==========*/
+.first-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: fixed;
+  z-index: 10;
+}
+.first-nav a {
+  text-decoration: none;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #000;
+}
+.first-nav .links {
+  display: flex;
+  gap: 1.5rem;
+}
+.first-nav .links a {
+  text-decoration: none;
+  color: #242424;
+  font-size: 1.5rem;
+}
+
+.sec-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5em 1em 1rem 1rem;
+}
+.sec-nav a {
+  text-decoration: none;
+  color: #242424;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sec-nav a span {
+  font-size: 0.6em;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+}
+.hero .box {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: -1;
+}
+.hero .box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1em;
+}
+.hero .box .box-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(1, 1, 14, 0.438);
+  border-radius: 1em;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 3em;
+  gap: 1em;
+}
+.hero .box .box-text h2 {
+  font-size: 2.5vw;
+  color: #fff;
+}
+.hero .box .box-text p {
+  color: #fff;
+  font-size: 1.2em;
+}
+.hero .box .box-text button {
+  padding: 0.9em 1.8em;
+  border: none;
+  background-color: #5755fe;
+  color: #fff;
+  border-radius: 0.5em;
+  font-size: 1em;
+}
+
+.products-card {
+  width: 100%;
+  padding: 1em 2em;
+}
+.products-card h1 {
+  font-size: 2em;
+}
+.products-card .card-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2.3em;
+  padding: 1em;
+}
+.products-card .card-wrap .card {
+  width: 20rem;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  box-shadow: 1px 1px 10px gray;
+  border-radius: 0.5em;
+}
+.products-card .card-wrap .card:hover {
+  scale: 1.03;
+  transition: all 0.1s ease-in;
+}
+.products-card .card-wrap .card .img-box {
+  width: 100%;
+}
+.products-card .card-wrap .card .img-box img {
+  width: 100%;
+}
+.products-card .card-wrap .card .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+.products-card .card-wrap .card .card-text h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.products-card .card-wrap .card .card-text h2 {
+  color: rgb(39, 87, 244);
+  font-size: 1.3em;
+}
+.products-card .card-wrap .card .card-text .stars i {
+  color: grey;
+}
+.products-card .card-wrap .card .card-text .stars .fill {
+  color: rgb(226, 226, 9);
+}
+.products-card .card-wrap .card .card-text button {
+  padding: 0.7em 1em;
+  border: none;
+  background-color: rgb(24, 89, 220);
+  color: #fff;
+  border-radius: 0.4em;
+}
+.products-card .card-wrap .card .card-text button:active {
+  scale: 0.95;
+}
+
+.card-section {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.card-section .card-left {
+  width: 70%;
+}
+.card-section .card-left h1 {
+  font-size: 2.6vw;
+  font-weight: 600;
+}
+.card-section .card-left .card-products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2.3em;
+  padding: 1em;
+}
+.card-section .card-left .card-products .product {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
+.card-section .card-left .card-products .product .one {
+  display: flex;
+  gap: 0.5em;
+}
+.card-section .card-left .card-products .product .one img {
+  width: 4em;
+  border-radius: 0.3em;
+}
+.card-section .card-left .card-products .product .two {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+.card-section .card-left .card-products .product .two button {
+  border: none;
+  font-size: 1.1em;
+  color: red;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+  text-align: center;
+}
+.card-section .card-left .card-products .product .two button:active {
+  scale: 0.95;
+}
+.card-section .card-right {
+  width: 30%;
+  padding: 1em 1em;
+}
+.card-section .card-right .summary {
+  width: 28vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  box-shadow: 1px 1px 10px gray;
+  padding: 1em;
+  border-radius: 0.5em;
+  position: fixed;
+}
+.card-section .card-right .summary .toPay {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.card-section .card-right .summary .toPay .first {
+  display: flex;
+  justify-content: space-between;
+}
+.card-section .card-right .summary .toPay .sec {
+  display: flex;
+  justify-content: space-between;
+}
+.card-section .card-right .summary .total {
+  display: flex;
+  justify-content: space-between;
+}
+.card-section .card-right .summary button {
+  padding: 0.5em 0;
+  border: none;
+  background-color: rgb(50, 131, 244);
+  color: #fff;
+  font-size: 1em;
+  border-radius: 0.4em;
+}
+.card-section .card-right .summary button:active {
+  scale: 0.95;
+}
+
+/*==================== Responsive ====================*/
+@media (max-width: 800px) {
+  .hero .box {
+    width: 95%;
+    height: 35vh;
+  }
+  .hero .box .box-text {
+    padding: 1em 2em;
+    gap: 2em;
+  }
+  .hero .box .box-text h2 {
+    font-size: 3.5vh;
+  }
+  .hero .box .box-text p {
+    font-size: 1.4em;
+  }
+  .products-card {
+    padding: 1em 1em;
+  }
+  .products-card .card-wrap .card:hover {
+    scale: none;
+  }
+  .card-section {
+    padding: 1em 1em;
+    flex-direction: column;
+  }
+  .card-section .card-left {
+    width: 100%;
+  }
+  .card-section .card-left h1 {
+    font-size: 2em;
+  }
+  .card-section .card-right .summary {
+    width: 87vw;
+    position: none;
+  }
+}/*# sourceMappingURL=index.css.map */
