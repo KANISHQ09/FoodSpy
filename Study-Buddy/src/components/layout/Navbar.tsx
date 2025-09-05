@@ -51,10 +51,10 @@ export const Navbar = () => {
           className="flex items-center space-x-2"
         >
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <BookOpen className="h-4 w-4" />
+            <img src='https://i.pinimg.com/736x/bc/28/55/bc2855b4af523e649c17a50c81f020e5.jpg'/>
           </div>
           <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            AI JEE Buddy
+            Study Buddy
           </span>
         </motion.div>
 

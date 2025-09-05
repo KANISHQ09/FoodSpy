@@ -54,7 +54,7 @@ const Home = () => {
     {
       icon: Users,
       title: 'Study Groups',
-      description: 'Collaborate with peers in real-time study rooms',
+      description: 'Collaborate with peers in real-time study rooms with AI assistance',
       color: 'from-pink-500 to-rose-500'
     }
   ];
@@ -72,21 +72,21 @@ const Home = () => {
       icon: Upload,
       title: 'Upload Notes',
       description: 'Transform your PDFs into smart study material',
-      color: 'bg-secondary'
+      color: 'bg-primary'
     },
     {
       href: '/tests',
       icon: TrendingUp,
       title: 'Take Test',
       description: 'Practice with adaptive mock tests',
-      color: 'bg-accent'
+      color: 'bg-primary'
     },
     {
       href: '/rooms',
       icon: Users,
       title: 'Study Together',
       description: 'Join or create study rooms',
-      color: 'bg-muted'
+      color: 'bg-primary'
     }
   ];
 
@@ -116,11 +116,11 @@ const Home = () => {
           className="text-center max-w-4xl mx-auto"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground mr-4">
-              <BookOpen className="h-8 w-8" />
+            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-primary text-primary-foreground mr-4">
+              <img src='https://i.pinimg.com/736x/bc/28/55/bc2855b4af523e649c17a50c81f020e5.jpg'/>
             </div>
-            <span className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              AI JEE Study Buddy
+            <span className="p-1 text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Study Buddy
             </span>
           </div>
           
