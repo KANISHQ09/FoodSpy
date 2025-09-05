@@ -16,7 +16,7 @@ Learn smarter with AI-powered explanations, mock tests, and real-time study grou
 
 ---
 
-## 🎯 Why Hey Buddy Spy?
+## 🎯 Why Study Buddy?
 
 JEE prep is challenging – doubts, lengthy concepts, and revision often slow students down.  
 Study Buddy brings **AI intelligence + peer collaboration** together in one platform to make learning **faster, simpler, and interactive.**
